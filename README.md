@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Laporan Praktikum
 
-## Getting Started
+|  | Pemrograman Berbasis Framework 2025 |
+| ------ |-------------------------------------|
+| NIM | 244107027004                        |
+| Nama | Rafio Sadani                        |
+| Kelas | TI - 4K                             |
 
-First, run the development server:
+## Langkah - Langkah Praktikum
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Membuat React Context untuk Global State Sederhana
+   ![React Context Global State Theme](./public/image-docs/ss-theme-toggle.png "React Context Global State Theme")
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Membuat State Management Kompleks untuk Counter menggunakan Zustand
+   ![State Management Kompleks menggunakan Zustand](./public/image-docs/ss-counter-zustand.png "State Management Kompleks menggunakan Zustand")
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+3. Menggunakan Redux Toolkit untuk Counter dengan SSR Support
+   ![Redux Toolkit dengan SSR Support](./public/image-docs/ss-counter-redux.png "Redux Toolkit dengan SSR Support")
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Melakukan Fetching Data User menggunakan SWR (Stale-While-Revalidate)
+   ![Data Fetching menggunakan SWR(Stale-While-Revalidate)](./public/image-docs/ss-swr-user-fetching.png "Data Fetching menggunakan SWR(Stale-While-Revalidate)")
 
-## Learn More
+5. Membuat URL State Management untuk Filter Produk berdasarkan Kategori
+   ![URL State Management Filter Produk Berdasarkan Kategori](./public/image-docs/ss-product-filter-url-state.png "URL State Management Filter Produk Berdasarkan Kategori")
 
-To learn more about Next.js, take a look at the following resources:
+## Tugas Praktikum
+1. Perbandingan performa antara Context API, Zustand, dan Redux:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   | State Management | Bukti Performa |
+   |------------------|----------------|
+   | Context API (Uji Performa Global State untuk Tema) | ![Uji Performa Global State untuk Tema](./public/image-docs/ss-performance-context.png "Uji Performa Global State untuk Tema") |
+   | Zustand (Uji Performa Counter menggunakan Zustand) | ![Uji Performa Counter menggunakan Zustand](./public/image-docs/ss-performance-zustand.png "Uji Performa Counter menggunakan Zustand") |
+   | Redux (Uji Performa Conter menggunakan Redux)      | ![Uji Performa Counter menggunakan Redux](./public/image-docs/ss-performance-redux.png "Uji Performa Counter menggunakan Redux")|
+   <b>Kesimpulan: </b> Dalam pengujian performa Lighthouse, Zustand dan Redux tampil lebih efisien dengan 40ms waktu render, mengungguli Context API yang mencatat 50ms. Ini menunjukkan keunggulan Zustand dan Redux dalam manajemen re-render. Zustand, dengan efisiensi re-render selektif dan API ringkas, ideal untuk sebagian besar aplikasi modern. Redux tetap pilihan kuat untuk aplikasi besar yang kompleks berkat ekosistem tooling lengkapnya. Sementara itu, Context API, karena kecenderungan re-render berlebihan, lebih cocok untuk state global yang jarang berubah seperti tema atau autentikasi.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. Kapan sebaiknya menggunakan masing-masing solusi?
+   - **Context API**
+      - Gunakan ketika kita ingin membuat sebuah *global state* sederhana dan jarang berubah.
+      - 📍 **Contoh penggunaan**:
+         - State untuk tema aplikasi (terang/gelap).
+         - State untuk preferensi bahasa.
+      - Cocok karena perubahan ini jarang terjadi dan tidak menyebabkan re-render berlebihan di seluruh aplikasi.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   - **Zustand**
+      - Gunakan ketika membutuhkan state management yang efisien dengan struktur kode sederhana, tanpa banyak boilerplate.
+      - 📍 **Contoh penggunaan**:
+         - Dashboard admin dinamis.
+         - Banyak widget/kartu dengan data real-time yang sering diperbarui, namun re-render hanya terjadi di bagian yang relevan.
+      - Cocok untuk aplikasi real-time dengan skala menengah.
+   - **Redux**
+     - Gunakan ketika membangun aplikasi berskala besar dan kompleks.
+     - 📍 **Contoh penggunaan**:
+        - Aplikasi E-commerce (keranjang belanja, filter produk, manajemen pesanan, user profile).
+        - Aplikasi ERP (modul inventaris, keuangan, SDM).
+     - Cocok karena Redux menyediakan tooling dan arsitektur yang kuat untuk mengelola banyak state yang saling berinteraksi.
