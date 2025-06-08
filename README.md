@@ -9,19 +9,19 @@
 ## Langkah - Langkah Praktikum
 
 1. Membuat React Context untuk Global State Sederhana
-   ![React Context Global State Theme](./public/image-docs/ss-theme-toggle.png "React Context Global State Theme")
+   <img src="./public/image-docs/ss-theme-toggle.png" alt="React Context Global State Theme" title="React Context Global State Theme" style="border: 1px solid #000; border-radius: 6px; padding: 4px;" />
 
 2. Membuat State Management Kompleks untuk Counter menggunakan Zustand
-   ![State Management Kompleks menggunakan Zustand](./public/image-docs/ss-counter-zustand.png "State Management Kompleks menggunakan Zustand")
+   <img src="./public/image-docs/ss-counter-zustand.png" alt="State Management Kompleks menggunakan Zustand" title="State Management Kompleks menggunakan Zustand" style="border: 1px solid #000; border-radius: 6px; padding: 4px;" />
 
 3. Menggunakan Redux Toolkit untuk Counter dengan SSR Support
-   ![Redux Toolkit dengan SSR Support](./public/image-docs/ss-counter-redux.png "Redux Toolkit dengan SSR Support")
+   <img src="./public/image-docs/ss-counter-redux.png" alt="Redux Toolkit dengan SSR Support" title="Redux Toolkit dengan SSR Support" style="border: 1px solid #000; border-radius: 6px; padding: 4px;" />
 
 4. Melakukan Fetching Data User menggunakan SWR (Stale-While-Revalidate)
-   ![Data Fetching menggunakan SWR(Stale-While-Revalidate)](./public/image-docs/ss-swr-user-fetching.png "Data Fetching menggunakan SWR(Stale-While-Revalidate)")
+   <img src="./public/image-docs/ss-swr-user-fetching.png" alt="Data Fetching menggunakan SWR(Stale-While-Revalidate)" title="Data Fetching menggunakan SWR(Stale-While-Revalidate)" style="border: 1px solid #000; border-radius: 6px; padding: 4px;" />
 
 5. Membuat URL State Management untuk Filter Produk berdasarkan Kategori
-   ![URL State Management Filter Produk Berdasarkan Kategori](./public/image-docs/ss-product-filter-url-state.png "URL State Management Filter Produk Berdasarkan Kategori")
+   <img src="./public/image-docs/ss-product-filter-url-state.png" alt="URL State Management Filter Produk Berdasarkan Kategori" title="URL State Management Filter Produk Berdasarkan Kategori" style="border: 1px solid #000; border-radius: 6px; padding: 4px;" />
 
 ## Tugas Praktikum
 1. Perbandingan performa antara Context API, Zustand, dan Redux:
@@ -31,7 +31,8 @@
    | Context API (Uji Performa Global State untuk Tema) | ![Uji Performa Global State untuk Tema](./public/image-docs/ss-performance-context.png "Uji Performa Global State untuk Tema") |
    | Zustand (Uji Performa Counter menggunakan Zustand) | ![Uji Performa Counter menggunakan Zustand](./public/image-docs/ss-performance-zustand.png "Uji Performa Counter menggunakan Zustand") |
    | Redux (Uji Performa Conter menggunakan Redux)      | ![Uji Performa Counter menggunakan Redux](./public/image-docs/ss-performance-redux.png "Uji Performa Counter menggunakan Redux")|
-   <b>Kesimpulan: </b> Dalam pengujian performa Lighthouse, Zustand dan Redux tampil lebih efisien dengan 40ms waktu render, mengungguli Context API yang mencatat 50ms. Ini menunjukkan keunggulan Zustand dan Redux dalam manajemen re-render. Zustand, dengan efisiensi re-render selektif dan API ringkas, ideal untuk sebagian besar aplikasi modern. Redux tetap pilihan kuat untuk aplikasi besar yang kompleks berkat ekosistem tooling lengkapnya. Sementara itu, Context API, karena kecenderungan re-render berlebihan, lebih cocok untuk state global yang jarang berubah seperti tema atau autentikasi.
+   
+    <b>Kesimpulan: </b> Dalam pengujian performa Lighthouse, Zustand dan Redux tampil lebih efisien dengan 40ms waktu render, mengungguli Context API yang mencatat 50ms. Ini menunjukkan keunggulan Zustand dan Redux dalam manajemen re-render. Zustand, dengan efisiensi re-render selektif dan API ringkas, ideal untuk sebagian besar aplikasi modern. Redux tetap pilihan kuat untuk aplikasi besar yang kompleks berkat ekosistem tooling lengkapnya. Sementara itu, Context API, karena kecenderungan re-render berlebihan, lebih cocok untuk state global yang jarang berubah seperti tema atau autentikasi.
 
 2. Kapan sebaiknya menggunakan masing-masing solusi?
    - **Context API**
