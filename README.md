@@ -32,7 +32,7 @@
    | Zustand (Uji Performa Counter menggunakan Zustand) | ![Uji Performa Counter menggunakan Zustand](./public/image-docs/ss-performance-zustand.png "Uji Performa Counter menggunakan Zustand") |
    | Redux (Uji Performa Conter menggunakan Redux)      | ![Uji Performa Counter menggunakan Redux](./public/image-docs/ss-performance-redux.png "Uji Performa Counter menggunakan Redux")|
    
-    <p style="text-align: justify;">
+    <p style="align: justify;">
         <b>Kesimpulan: </b> Dalam pengujian performa Lighthouse, Zustand dan Redux tampil lebih efisien dengan 40ms waktu render, mengungguli Context API yang mencatat 50ms. Ini menunjukkan keunggulan Zustand dan Redux dalam manajemen re-render. Zustand, dengan efisiensi re-render selektif dan API ringkas, ideal untuk sebagian besar aplikasi modern. Redux tetap pilihan kuat untuk aplikasi besar yang kompleks berkat ekosistem tooling lengkapnya. Sementara itu, Context API, karena kecenderungan re-render berlebihan, lebih cocok untuk state global yang jarang berubah seperti tema atau autentikasi.
     </p>
 
